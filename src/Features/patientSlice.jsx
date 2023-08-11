@@ -14,7 +14,7 @@ export const patientSlice = createSlice({
   initialState,
   reducers: {
     addPatient: (state, action) => {
-      const { id, name, age, sex, phone } = action.payload;
+        state.push(action.payload)
     },
     editPatient: (state, action) => {
       const { id, name, age, sex, phone } = action.payload;
@@ -39,3 +39,7 @@ export const patientSlice = createSlice({
     },
   },
 });
+
+
+export {addPatient , editPatient , deletePatient} = patientSlice.actions
+export default 
